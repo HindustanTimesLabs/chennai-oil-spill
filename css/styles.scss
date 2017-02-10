@@ -453,3 +453,109 @@ section{
         }
     }
 }
+
+/*chart legend*/
+
+
+.legend-block{
+    display: inline-block;
+    width: 140px;
+    font-family: $block;
+    font-size: 0.9em;
+}
+
+.legend-block .legend-box{
+    height: 10px;
+    width: 20px;
+}
+
+.legend-block .legend-box, .legend-block p{
+    vertical-align: middle;
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.tier-one{
+    background-color: #fee0d2
+}
+
+.tier-two{
+    background-color: #fc9272
+}
+
+.data-na{
+    background-color: #ccc
+}
+
+.tier-three{
+    background-color: #de2d26
+}
+
+.spill.highlight{
+    stroke-width: 3px;
+    stroke: black;
+}
+
+/* chart tooltip */
+.tip {
+  border-radius: 3px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  position: fixed;
+  padding: 5px;
+  width: 265px;
+}
+.tip .name {
+  font-size: .9em;
+  font-weight: 700;
+  margin-left: 2px;
+}
+.tip .ministry {
+  color: #777;
+  font-size: .8em;
+  margin-left: 2px;
+  margin-bottom: 8px;
+}
+.tip table {
+  font-size: .8em;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.tip table td {
+  width: 33.33%;
+  text-align: center;
+}
+.tip table thead td {
+  padding-bottom: 4px;
+  border-bottom: 1px solid #eee;
+  font-size: .8em;
+}
+.tip table tr.data {
+  font-size: 1em;
+}
+.tip table tr td:first-child {
+  padding-right: 10px;
+}
+.tip:before {
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  margin-left: -15px;
+  content: '';
+  width: 0;
+  height: 0;
+}
+.tip.top:before {
+  top: 98.1%;
+  border-top: solid 10px #fff;
+  border-left: solid 10px transparent;
+  border-right: solid 10px transparent;
+}
+.tip.bottom:before {
+  bottom: 100%;
+  border-bottom: solid 10px #fff;
+  border-left: solid 10px transparent;
+  border-right: solid 10px transparent;
+}
