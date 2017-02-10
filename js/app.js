@@ -16,6 +16,7 @@ var windowwidth = $(window).width();
 var pathf = d3.geoPath()
     .projection(projection)
     .pointRadius(2);
+
 var mapwidth = (windowwidth>450)?500:windowwidth*0.9;
 var mapheight = (windowwidth>450)?300:250
 
@@ -24,6 +25,7 @@ windowWidth = (windowWidth>1200)?1200:windowWidth
  $(window).scroll(function() {
         var windscroll = $(window).scrollTop();
         var buffer = 50
+        var scrollbuffer = 150
         if ($('.copy-container').position().top <= windscroll + buffer ) {
             if (!$('.progress-nav').hasClass('fixed')){
                 $('.progress-nav').addClass('fixed')
@@ -31,10 +33,10 @@ windowWidth = (windowWidth>1200)?1200:windowWidth
             }
 
             $('.section-container').each(function(i) {
-                if ($(this).position().top <= windscroll + buffer   ) {
+                if ($(this).position().top <= windscroll &&  $('.copy-container').hasClass('gap')) {
                     $('.s-dot.active').removeClass('active');
                     $('.s-dot').eq(i).addClass('active');
-                    var progress = (windscroll - $(this).position().top)/($(this).height())
+                    var progress = (windscroll + (buffer*3) - $(this).position().top)/($(this).height())
                    
                     if (progress<=100){
                         var comp = i*25 + (progress*25)+"%"
@@ -90,12 +92,14 @@ d3.csv('data/all-oil-spills.csv',function(error,data){
         var box_width = Math.floor(0.6*windowWidth)
     }
 
-    d3.select('#all-spills-viz')
+    var svg = d3.select('#all-spills-viz')
         .append('svg')
         .attr('class','chart-container')
         .attr('width',windowWidth)
         .attr('height',windowHeight)
-        .append('g')
+
+
+    svg.append('g')
         .attr('class','chart-container-g')
         .attr('width',windowWidth - margin.left - margin.right)
         .attr('height',windowHeight - margin.top - margin.bottom)
@@ -115,15 +119,83 @@ d3.csv('data/all-oil-spills.csv',function(error,data){
         .attr('width', x.bandwidth())
         .attr('height', blockheight)
         .style('fill',function(d){return getColor(d.quantity)})
-        .on('click',function(e,i){console.log(e,i)})
         .on("mouseover", tipOn)
         .on("mouseout", tipOff);
 // x axis
-    d3.selectAll('.chart-container-g')
-            .append('g')
-            .attr("class", "x axis")
-          .attr("transform", "translate(0,"+ (windowHeight-margin.top-(margin.bottom/2)) +")")
-          .call(xAxis)
+d3.selectAll('.chart-container-g')
+        .append('g')
+        .attr("class", "x axis")
+      .attr("transform", "translate(0,"+ (windowHeight-margin.top-(margin.bottom/2)) +")")
+      .call(xAxis)
+
+      // tooltips
+svg.on("mouseout", function(){
+  $(".tip").hide()
+});
+
+ function tipOn(d, i){
+
+      var dat = d;
+    var elem = ".spill.s-" + i;
+      $(".tip").empty();
+
+      // show
+      $(".tip").show();
+      $(".spill").removeClass("highlight");
+      $(elem).addClass("highlight");
+      // populate
+      $(".tip").append("<div class='name'>" + dat.spilled_by + "</div>");
+      $(".tip").append("<div class='date'>" + dat.date + "</div>");
+      $(".tip").append("<div class='location'><b>Location:</b> " + dat.location + "</div>");
+      $(".tip").append("<div class='quantity'><b>Quantity:</b> " + (dat.quantity.match(/[0123456789]/g)?dat.quantity+" tonnes":"Unknown") + "</div>");
+
+      var blockheight = 10
+      // position
+
+      // calculate top
+      function calcTop(d){
+        var obj = _.findWhere(yearnest, {key:d['year']})
+        var y2 =  y(obj.values.getIndexBy("spilled_by", d.spilled_by))
+        var h = $(".tip").height();
+        var ot = $("svg").offset().top;
+        var st = $(window).scrollTop();
+        var r = blockheight*3.5;
+        var t = y2 - r - h + ot - st + 10 ;
+
+        if (t < 40){
+          t = y2 + (h/2.7) + ot - st + 10;
+          $(".tip").addClass("bottom").removeClass("top");
+        } else {
+          $(".tip").addClass("top").removeClass("bottom");
+        }
+        return t;
+      }
+
+      function calcLeft(d){
+        var x2 = x(d.year);
+        var r = x.bandwidth()/2;
+        var w = $(".tip").width();
+        var l = x2 - w / 2 + r;
+        var m = ($(window).width()>1200 ? 0 : margin.left-r)
+        return x2-r-m;
+      }
+
+      $(".tip").css({
+        top: calcTop(dat),
+        left: calcLeft(dat)
+      });
+
+      $(window).resize(function(){
+        $(".tip").css({
+          top: calcTop(dat),
+          left: calcLeft(dat)
+        });
+      });
+    }
+
+    function tipOff(d){
+      $(".spill").removeClass("highlight");
+    }
 
 })
 
@@ -138,83 +210,17 @@ Array.prototype.getIndexBy = function (name, value) {
 
 function getColor(e){
     if (!e.match(/[0-9]/)){
-        return "#ccc"
+        return "#bbb"
     } else if (+e < 700){
-        return "#fee0d2"
+        return "#EBD1D0"
     } else if (+e < 10000){
-        return "#fc9272"
+        return "#D5A1A0"
     } else {
-        return "#de2d26"
+        return "#AD4746"
     }
 }
 
-// tooltips
-    svg.on("mouseout", function(){
-      $(".tip").hide()
-    });
-
- function tipOn(d, i){
-
-      var dat = d;
-      console.log(d)
-        var elem = ".spill.s-" + i;
-      $(".tip").empty();
-
-      // show
-      $(".tip").show();
-      $(".spill").removeClass("highlight");
-      $(elem).addClass("highlight");
-      // populate
-      $(".tip").append("<div class='name'>" + dat.spilled_by + "</div>");
-      var blockheight = 10
-      // position
-      // calculate top
-      function calcTop(d){
-
-        var y = d.y;
-        var h = $(".tip").height();
-        var ot = $("svg").offset().top;
-        var st = $(window).scrollTop();
-        var r = blockheight;
-        var t = y - r - h + ot - st + 10;
-
-        if (t < 40){
-          t = y + r + (h/2.7) + ot - st + 10;
-          $(".tip").addClass("bottom").removeClass("top");
-        } else {
-          $(".tip").addClass("top").removeClass("bottom");
-        }
-
-        return t;
-      }
-
-      function calcLeft(d){
-        var x = d.x;
-        var r =blockheight;
-        var w = $(".tip").width();
-        var l = x - w / 2 + r;
-        return x + margin.left - w / 2;
-      }
-
-      $(".tip").css({
-        top: calcTop(dat),
-        left: calcLeft(dat)
-      });
-      $(window).resize(function(){
-        $(".tip").css({
-          top: calcTop(dat),
-          left: calcLeft(dat)
-        });
-      });
-
-    }
-
-    function tipOff(d){
-
-      $(".circle").removeClass("highlight");
-    }
-
-    d3.selection.prototype.moveToFront = function() {
+d3.selection.prototype.moveToFront = function() {
   return this.each(function(){
     this.parentNode.appendChild(this);
   });

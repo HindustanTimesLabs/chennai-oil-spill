@@ -25,6 +25,7 @@ body{
     background-color: $back;
     color: $text;
 }
+
 .lead-img-desktop{
     width: 100%;
     height: 850px;
@@ -129,6 +130,7 @@ body{
 
 .copy-container{
     padding-top: 7em;
+    padding-bottom: 19em;
     p{
         margin-bottom: 1.5em;
     }
@@ -143,7 +145,7 @@ body{
 }
 
 .copy-container.gap{
-    margin-top: 80px;
+    margin-top: 70px;
 
 }
 
@@ -324,12 +326,13 @@ section{
 }
 
 .progress-nav{
-    height: 50px;
+    height: 40px;
     background-color: $back;
     transition: all 0.3s linear;
     padding-left: 20px;
     padding-right: 20px;
     position: relative;
+    opacity: 0;
 }
 
 .progress-nav .s-dot-container{
@@ -455,11 +458,15 @@ section{
 }
 
 /*chart legend*/
+.legend{
+    margin-bottom: 20px;
+    margin-top: 10px;
 
+}
 
 .legend-block{
     display: inline-block;
-    width: 140px;
+    width: 240px;
     font-family: $block;
     font-size: 0.9em;
 }
@@ -467,28 +474,44 @@ section{
 .legend-block .legend-box{
     height: 10px;
     width: 20px;
+    margin-right: 10px;
+    border: solid 1.5px #bbb;
 }
 
 .legend-block .legend-box, .legend-block p{
     vertical-align: middle;
     display: inline-block;
     margin-bottom: 0;
+    text-align: left;
 }
+ .legend-block p span{
+    display: block;
+    font-size: 0.8em;
+
+ }
 
 .tier-one{
-    background-color: #fee0d2
+    background-color: #EBD1D0
 }
 
 .tier-two{
-    background-color: #fc9272
+    background-color: #D5A1A0
 }
 
 .data-na{
-    background-color: #ccc
+    background-color: #bbb
 }
 
 .tier-three{
-    background-color: #de2d26
+    background-color: #AD4746
+}
+
+.spill{
+    stroke-width: 1.5px;
+    stroke: #bbb;
+    @media(max-width: 800px){
+        stroke-width: 1px;
+    }
 }
 
 .spill.highlight{
@@ -504,37 +527,22 @@ section{
   border: 1px solid #ccc;
   position: fixed;
   padding: 5px;
-  width: 265px;
+  width: 200px;
+  text-align: left;
 }
+
 .tip .name {
   font-size: .9em;
   font-weight: 700;
   margin-left: 2px;
 }
-.tip .ministry {
+.tip .date {
   color: #777;
   font-size: .8em;
   margin-left: 2px;
   margin-bottom: 8px;
 }
-.tip table {
-  font-size: .8em;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-.tip table td {
-  width: 33.33%;
-  text-align: center;
-}
-.tip table thead td {
-  padding-bottom: 4px;
-  border-bottom: 1px solid #eee;
-  font-size: .8em;
-}
-.tip table tr.data {
-  font-size: 1em;
-}
+
 .tip table tr td:first-child {
   padding-right: 10px;
 }
@@ -558,4 +566,9 @@ section{
   border-bottom: solid 10px #fff;
   border-left: solid 10px transparent;
   border-right: solid 10px transparent;
+}
+
+.tip .quantity,.tip .location{
+    font-family: "Open Sans";
+    font-size: 0.8em;
 }

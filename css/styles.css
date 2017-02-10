@@ -101,7 +101,8 @@ body {
   border: solid 2px #ddd; }
 
 .copy-container {
-  padding-top: 7em; }
+  padding-top: 7em;
+  padding-bottom: 19em; }
   .copy-container p {
     margin-bottom: 1.5em; }
   @media (max-width: 1300px) {
@@ -113,7 +114,7 @@ body {
   margin-bottom: 20px; }
 
 .copy-container.gap {
-  margin-top: 80px; }
+  margin-top: 70px; }
 
 .locator-con {
   text-align: center;
@@ -257,12 +258,13 @@ section h2 {
   text-align: center; }
 
 .progress-nav {
-  height: 50px;
+  height: 40px;
   background-color: #fcfcfc;
   transition: all 0.3s linear;
   padding-left: 20px;
   padding-right: 20px;
-  position: relative; }
+  position: relative;
+  opacity: 0; }
 
 .progress-nav .s-dot-container {
   width: 19%;
@@ -362,32 +364,50 @@ section h2 {
       float: none; } }
 
 /*chart legend*/
+.legend {
+  margin-bottom: 20px;
+  margin-top: 10px; }
+
 .legend-block {
   display: inline-block;
-  width: 140px;
+  width: 240px;
   font-family: "Open Sans", sans-serif;
   font-size: 0.9em; }
 
 .legend-block .legend-box {
   height: 10px;
-  width: 20px; }
+  width: 20px;
+  margin-right: 10px;
+  border: solid 1.5px #bbb; }
 
 .legend-block .legend-box, .legend-block p {
   vertical-align: middle;
   display: inline-block;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  text-align: left; }
+
+.legend-block p span {
+  display: block;
+  font-size: 0.8em; }
 
 .tier-one {
-  background-color: #fee0d2; }
+  background-color: #EBD1D0; }
 
 .tier-two {
-  background-color: #fc9272; }
+  background-color: #D5A1A0; }
 
 .data-na {
-  background-color: #ccc; }
+  background-color: #bbb; }
 
 .tier-three {
-  background-color: #de2d26; }
+  background-color: #AD4746; }
+
+.spill {
+  stroke-width: 1.5px;
+  stroke: #bbb; }
+  @media (max-width: 800px) {
+    .spill {
+      stroke-width: 1px; } }
 
 .spill.highlight {
   stroke-width: 3px;
@@ -401,36 +421,19 @@ section h2 {
   border: 1px solid #ccc;
   position: fixed;
   padding: 5px;
-  width: 265px; }
+  width: 200px;
+  text-align: left; }
 
 .tip .name {
   font-size: .9em;
   font-weight: 700;
   margin-left: 2px; }
 
-.tip .ministry {
+.tip .date {
   color: #777;
   font-size: .8em;
   margin-left: 2px;
   margin-bottom: 8px; }
-
-.tip table {
-  font-size: .8em;
-  margin: 0;
-  padding: 0;
-  width: 100%; }
-
-.tip table td {
-  width: 33.33%;
-  text-align: center; }
-
-.tip table thead td {
-  padding-bottom: 4px;
-  border-bottom: 1px solid #eee;
-  font-size: .8em; }
-
-.tip table tr.data {
-  font-size: 1em; }
 
 .tip table tr td:first-child {
   padding-right: 10px; }
@@ -455,5 +458,9 @@ section h2 {
   border-bottom: solid 10px #fff;
   border-left: solid 10px transparent;
   border-right: solid 10px transparent; }
+
+.tip .quantity, .tip .location {
+  font-family: "Open Sans";
+  font-size: 0.8em; }
 
 /*# sourceMappingURL=styles.css.map*/
