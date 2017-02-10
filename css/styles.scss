@@ -572,3 +572,64 @@ section{
     font-family: "Open Sans";
     font-size: 0.8em;
 }
+
+/*ai 2 html */
+
+#g-Chennai-map-Artboard_1{
+                margin-bottom: 50px;
+                position:relative;
+                overflow:hidden;
+                width:100%;
+                max-width: 800px;
+                margin-top: -30px;
+            }
+
+            .g-aiAbs{
+                position:absolute;
+            }
+            .g-aiImg{
+                display:block;
+                width:100% !important;
+            }
+            #g-Chennai-map-Artboard_1 p{
+                font-family:nyt-franklin,arial,helvetica,sans-serif;
+                font-size:13px;
+                line-height:18px;
+                margin:0;
+            }
+            #g-Chennai-map-Artboard_1 .g-aiPstyle0 {
+                font-family:Open Sans;
+                font-size:32px;
+                line-height:50px;
+                font-weight:bold;
+                color:#414042;
+            }
+            #g-Chennai-map-Artboard_1 .g-aiPstyle1 {
+                font-family:Open Sans;
+                font-size:12px;
+                line-height:14px;
+                color:#414042;
+            }
+            #g-Chennai-map-Artboard_1 .g-aiPstyle2 {
+                font-family:Open Sans;
+                font-size:15px;
+                color:#414042;
+            }
+            #g-Chennai-map-Artboard_1 .g-aiPstyle3 {
+                font-family:Open Sans;
+                font-size:15px;
+                font-weight:bold;
+                color:#414042;
+            }
+            #g-Chennai-map-Artboard_1 .g-aiPstyle4 {
+                font-family:Open Sans;
+                font-size:26px;
+                line-height:50px;
+                font-weight:bold;
+                color:#808285;
+            }
+            .g-aiPtransformed p { white-space: nowrap; }
+
+            .g-artboard {
+            margin:0 auto;
+        }
