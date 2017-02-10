@@ -1,0 +1,87 @@
+date,year,quantity,type,location,spilled_by
+1982,1982,-,-,West Coast,Sagar Vikas
+24/10/1988,1988,1000,-,Bombay Harbour,Lajpat Rai
+1989,1989,-,-,West Coast,SEDCO 252
+04/08/1989,1989,5500,Diesel Oil,795 nm SW of Bombay,MT Puppy
+29/08/1989,1989,-,-,Bombay Harbour,ONGC Tanker
+29/08/1989,1989,-,-,Saurashtra Coast,Unknown
+22/03/1990,1990,-,-,NW of Cochin,Merchant Ship
+07/09/1991,1991,692,FO,Gulf of Mannar,MT Jayabola
+14/11/1991,1991,4000,Crude,Bombay High,MT Zakir Hussain
+22/02/1992,1992,,Tanker Wash,40 NM S of New Moore Is,Unknown
+02/04/1992,1992,1000,Crude,54NM west of Kochi,MT Homi Bhabha
+16/08/1992,1992,1060,SKO,Madras Harbour,MT Albert Ekka
+17/11/1992,1992,300,FO,Bombay Harbour,MV Moon River
+21/01/1993,1993,40000,,Off Nicobar Islands,Maersk Navigator
+28/03/1993,1993,NK,Crude,Off Narsapur,ONGC shore rig at Kumarada
+29/04/1993,1993,110,Crude,Bombay Harbour,MT Nand Shivchand
+10/05/1993,1993,90,FO,Bhavnagar,MV Celelia
+17/05/1993,1993,6000,Crude,Bombay High,BHN Riser pipe rupture
+02/08/1993,1993,260,FO,Off New Mangalore,MV Challenge
+01/10/1993,1993,90,Crude,Cochin Harbour,MT Nand Shivchand
+12/05/1994,1994,1600,Crude,Off Sacromento Pt.,Innovative-1
+12/05/1994,1994,-,FO,360 NM SW of Porbandar,MV Stolidi
+05/06/1994,1994,1025,Crude,Off Aguada Lt,MV Sea Transporter
+20/07/1994,1994,100,FO,Bombay Harbour,MV Maharshi Dayanand
+27/11/1994,1994,288,HO,Off Madras,MV Sagar
+26/03/1995,1995,200,Diesel,Off Vizag,Dredger Mandovi - 2
+24/09/1995,1995,-,FO,Off Dwarka,MC Pearl
+13/11/1995,1995,-,Tanker Wash,"Eliot Beach, Madras",Unknown
+21/05/1996,1996,370,FO,Hooghly River,MV Prem Tista
+16/06/1996,1996,120,FO,"Off Prongs, Mumbai",MV Tupi Buzios
+18/06/1996,1996,132,FO,"Off Bandra, Mumbai",MV Zhen Don
+18/06/1996,1996,128,FO,"Off Karanja, Mumbai",MV Indian Prosperity
+23/06/1996,1996,110,FO,"Off Worli, Mumbai",MV Romanska
+16/08/1996,1996,124,FO,Malabar Coast,MV Al-Hadi
+25/01/1997,1997,-,Tank wash,Kakinada Coast,Unknown
+19/06/1997,1997,210,FO,"Off Prongs Lt, Mumbai",MV Arcadia Pride
+19/06/1997,1997,-,-,Hooghly River,MV Green Opal
+14/09/1997,1997,,"Naptha, Diesel/Petrol",Vizag,HPC refinery
+02/08/1997,1997,70,FO,Off Mumbai,MV Sea Express
+10/03/1998,1998,-,Gas leak,Bombay High,Drill Rig Noble
+12/05/1998,1998,-,Gas leak,Bombay High,Bombay High platform
+01/06/1998,1998,20,Crude,Off Vadinar,"Vadinar, SBM"
+09/06/1998,1998,-,-,Off Porbandar,Ocean Barge
+09/06/1998,1998,-,-,Off Veraval,Ocean Pacific
+08/07/1999,1999,500,FO,Mul Dwarka,MV Pacific Acadian
+19/07/2000,2000,-,-,Off Sagar Island,MV Prime Value
+08/09/2000,2000,-,-,Off Fort Aguada,MV River Princess
+17/12/2000,2000,1,FO,Bombay Harbour,MV Stonneswall Jackson
+08/06/2001,2001,-,-,Vadinar Gulf of kutch,Unknown
+10/07/2001,2001,1305,Diesel oil,Hooghly River,MV Lucnam
+23/09/2002,2002,-,-,Off PT Calimare 220NM,MV Hiderbahy
+29/04/2003,2003,1.8,Light Crude Oil,5 miles off Kochi,MT BR Ambedkar
+09/05/2003,2003,2000,Naptha,Mumbai Harbour (SW of west Colaba,MT UPCO_III
+18/05/2003,2003,145,FFO,Off Haldia,MV Segitega Biru
+10/08/2003,2003,300,Crude Oil,ONGC Rig (BHN),Uran Pipe Line
+28/02/2004,2004,1,Crude Oil,36 inches of ONGC Pipe Line at MP Oil Jetty,During Crude oil transfer from Jawahar Dweep to ONGC Trombay through 36
+01/10/2004,2004,0.56,-,Berth - MPT - 8 GOA,During Oil Transfer
+23/03/2005,2005,110,-,Off Goa (Aguada LT),MV Maritime Wisdom off Aguada LT.
+01/06/2005,2005,640,FO,Vishakhapatnam Port,MV Jinan VRWD-5
+27/07/2005,2005,80,,Fire taken place on oil platform off Bombay High,BHN Platfrom Bombay High
+30/08/2005,2005,8,,Sunken Ship off Tuticorin,MV IIDA
+01/09/2005,2005,100,,Off Visakhapatnam,MV Royal Ocean 2
+21/04/2006,2006,90,,Sunken Ship off Goa,INS Prahar
+06/05/2006,2006,100,,"Sunken Ship off Pt. Calimer, Tamil Nadu",DCI Tug-IV
+30/05/2006,2006,70,Furnace Fuel Oil,Grounded off Karawar Port,MV Ocean Seraya
+14/08/2006,2006,4500,,Outside Indian EEZ near Andaman and Nicobar Islands,MV Bright Artemis and MV Amar
+15/10/2007,2007,13.9,FO,Off Jakhau,MV Star Leikanger and Barge Dhan Lakshmu due to collision
+17/10/2007,2007,Not assesed,,"S Yanam Beach, Kakinada",Oil Driftd to shore from oil rigs
+19/07/2009,2009,50,,Off Mangalore,MV Asian Forest
+06/08/2009,2009,200,Oil Debris,South Gujarat and Maharashtra Coast,Not established
+09/09/2009,2009,930,FO,Paradip Port Anchorage,MV Black Rose
+07/08/2010,2010,700,,5 nautical miles from Mumbai Harbour.,MSC Chitra collided with M V Khalija
+22/08/2014,2014,4,,19 Deg 38.5N 088 Deg 10.5E (112o Paradip Lt 103 NM),Platinum Explorer of Vantage Drilling
+07/10/2013,2013,5,Crude oil,"Uran Plant, Mumbai", rupture of Mumbai High-Uran pipeline
+10/12/2014,2014,300,,Khulna River,Souther Star7
+21/01/2011,2011,55,Crude oil,Uran Coast,Mumbai-Uran Pipeline
+02/01/2010,2010,5,,Off South Chennai,Not known
+12/04/2010,2010,10,,Gopalpur (Orissa),MV Malvika
+20/07/2010,2010,80,,"Panna Offshore, Near Panna SBM",PMT Joint Venture
+15/08/2010,2010,20,,Eastern side of Kavaratti Island,MV Nanda Aprajita
+23/11/2010,2010,12,,Off Hugli Point,Collission between MV Tiger Spring & MV Green Valley
+30/01/2011,2011,10,,Haldia Jetty,MV Ratna Urvi
+30/01/2011,2011,80,,"Naval Dock, Mumbai",Collision between INS Vindhyagiri & MV Nardelake
+29/03/2011,2011,-,,Off South West Tamil Nadu Coast,Sinking of MV Mirach
+05/08/2011,2011,180,,Off Mumbai,Sinking of MV Rak Carrier
+28/01/2017,2017,70,,Chennai,Dawn Kanchipuram
