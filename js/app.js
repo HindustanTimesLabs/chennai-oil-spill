@@ -4,6 +4,8 @@ var d3 = require('d3')
 var _ = require('underscore')
 var topojson = require('topojson')
 
+// vr view
+
 $("#all-spills-viz").append("<div class='tip'></div>");
 $(".tip").hide();
 
@@ -11,14 +13,8 @@ var windowWidth = $(window).width(),
 windowHeight = 160,
 margin = {top: 30, bottom: 30, left: 40, right: 40}
 
-var projection = d3.geoMercator();
-var windowwidth = $(window).width();
-var pathf = d3.geoPath()
-    .projection(projection)
-    .pointRadius(2);
-
-var mapwidth = (windowwidth>450)?500:windowwidth*0.9;
-var mapheight = (windowwidth>450)?300:250
+var width = $(window).width();
+var height = (windowWidth>450)?400:500
 
 windowWidth = (windowWidth>1200)?1200:windowWidth
 // scrolly for the kkhh nav
@@ -235,4 +231,124 @@ d3.selection.prototype.moveToBack = function() {
 };
 
 // maps
+// var zoom = d3.zoom()
+//     .scaleExtent([1, 30])
+//     .on("zoom", move);
+
+// var projection = d3.geoMercator();
+
+// function zoomTo(location, scale) {
+//     var point = projection(location);
+//     console.log(zoom.translate.x)
+//     return [zoom.translate.x(width / 2 - point[0] * scale), zoom.translate.y(height / 2 - point[1] * scale)].scaleBy(scale);
+// }
+
+// function move() {
+// var t = d3.event.translate,
+//         s = d3.event.scale;
+// t[0] = Math.min(width / 2 * (s - 1), Math.max(width / 2 * (1 - s), t[0]));
+// t[1] = Math.min(height / 2 * (s - 1) + 230 * s, Math.max(height / 2 * (1 - s) - 230 * s, t[1]));
+// zoom.translate(t);
+// g.style("stroke-width", 1 / s).attr("transform", "translate(" + t + ")scale(" + s + ")");
+// }
+
+
+
+// var path = d3.geoPath()
+//     .projection(projection)
+//     .pointRadius(2);
+// var map_g = d3.select("#big-map")
+//         .append('svg')
+//         .attr('height',height)
+//         .attr('width',width)
+//         .append('g')
+
+//  map_g.transition().call(zoomTo([13.0827, 80.2707], 4).event);
+// d3.json("data/new-map.json", function(error, data){
+    
+//         var boundary = centerZoom(data);
+//         drawSubUnits(data);
+//         drawOuterBoundary(data, boundary);
+//       function centerZoom(data){
+
+//   var o = topojson.mesh(data, data.objects['Admin2'], function(a, b) { return a === b; });
+
+//   projection
+//       .scale(1)
+//       .translate([0, 0]);
+
+//   var b = path.bounds(o),
+//       s = 1 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height),
+//       t = [(width - s * (b[1][0] + b[0][0])) / 2, (height - s * (b[1][1] + b[0][1])) / 2];
+
+//   projection
+//       .scale(s)
+//       .translate(t);
+
+//   return o;
+// }
+
+
+
+// function drawOuterBoundary(data, boundary){
+//   map_g.append("path")
+//       .datum(boundary)
+//       .attr("d", path)
+//       .attr("class", "subunit-boundary");
+// }
+
+// function drawSubUnits(data){
+//   map_g.selectAll(".subunit")
+//       .data(topojson.feature(data, data.objects['Admin2']).features)
+//     .enter().append("path")
+//       .attr("class", function(d){ return "subunit " })
+//       .attr("d", path);
+// }
+
+
+            // g.append('g')
+            //     .attr('class','marker-layer')
+            //     .selectAll('#'+id+' .marker')
+            //     .data(function(d){
+                    
+            //     })
+            //     .enter()
+            //     .append('circle')
+            //     .attr("r", 6)
+            //     .style('fill',function(d){return color[d.year]})
+            //     .attr('transform',function(d){return 'translate('+projection([d.lng,d.lat])+")"})
+            //     .attr('class','marker')
+
+        // g.append("path")
+        // .datum(topojson.feature(data, data.objects['p'+id.split('id')[1]]))
+        // .attr("d", pathf);
+
+                // g.selectAll(".place-label-bg")
+                //     .data(topojson.feature(data, data.objects['p'+id.split('id')[1]]).features)
+                //   .enter()
+                //     .append("text")
+                //     .text('')
+                //     .attr("class", function(d){if (d.properties.description=="optional"){return "place-label optional"}else{return "place-label"}})
+                //     .attr("transform", function(d) { return "translate(" + projection(d.geometry.coordinates) + ")"; })
+                //     .attr("dy", "0.1em")
+                //     .attr("x", 5)
+                //     .style("text-anchor", "start")
+                //     .tspans( function(d){return d3.wordwrap(d.properties['Name'], 10)},"1em") //wrap after 20 char
+// })
+
+// function transition(id,path) {
+//         d3.selectAll('#'+id+' .marker')
+//             .transition()
+//             .duration(function(d){return d.time*60*1000*timefactor})
+//             .attrTween("transform", translateAlong(path.node()))
+// }
+  
+// function translateAlong(path) {
+// var l = path.getTotalLength();
+// return function(i) {
+//   return function(t) {
+//     var p = path.getPointAtLength(t * l);
+//     return "translate(" + p.x + "," + p.y + ")";//Move marker
+//   }
+// }
 

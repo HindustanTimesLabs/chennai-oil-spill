@@ -102,7 +102,7 @@ body {
 
 .copy-container {
   padding-top: 7em;
-  padding-bottom: 19em; }
+  padding-bottom: 15em; }
   .copy-container p {
     margin-bottom: 1.5em; }
   @media (max-width: 1300px) {
@@ -151,15 +151,52 @@ body {
   display: inline-block;
   vertical-align: top; }
 
-.story .headline {
+.blockquote.side p {
+  width: 95%;
+  margin-bottom: 0; }
+  @media (max-width: 600px) {
+    .blockquote.side p {
+      width: 100%; } }
+
+.copy-container a {
+  color: #008080; }
+
+.blockquote.side {
+  padding-left: 50px;
+  border-left: solid 8px #48A2D7;
+  margin-bottom: 1.5em;
+  margin-top: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em; }
+  @media (max-width: 600px) {
+    .blockquote.side {
+      padding-left: 20px;
+      border-left: solid 5px #48A2D7;
+      font-size: 0.7em;
+      line-height: 1.6em; } }
+
+.blockquote p.quote-person {
+  text-align: right;
+  border: none;
+  color: #8a8a8a;
+  font-style: italic;
+  margin-top: 10px;
+  font-size: 0.7em;
+  font-weight: 500; }
+
+.story h1.headline {
   text-align: left;
   padding-top: 0.7em;
   font-size: 2.8em;
   max-width: 650px;
   margin-left: 30px;
   padding-bottom: 0.7em; }
+  .story h1.headline span {
+    display: block;
+    font-size: 0.6em;
+    line-height: 2.4em; }
   @media (max-width: 600px) {
-    .story .headline {
+    .story h1.headline {
       font-size: 2.1em;
       margin-right: 20px; } }
 
@@ -244,9 +281,9 @@ section {
 section h2 {
   padding-bottom: 0.5em;
   border-bottom: solid 4px #48a2d7;
-  margin-bottom: 0.5em;
+  margin-bottom: 1.8em;
   font-size: 1.7em;
-  line-height: 1.4em; }
+  max-width: 350px; }
 
 .credits {
   text-align: center;
@@ -278,6 +315,7 @@ section h2 {
 
 .progress-nav.fixed {
   opacity: 1;
+  z-index: 10;
   position: fixed;
   top: 0;
   width: 100%;
@@ -338,7 +376,7 @@ section h2 {
   color: #fff;
   width: 100%;
   text-align: center;
-  font: 300 18px Lato,sans-serif;
+  font: 300 18px "Open Sans", sans-serif;
   padding: 30px;
   padding-bottom: 50px;
   margin-top: 30px; }
@@ -502,6 +540,9 @@ section h2 {
   font-family: Open Sans;
   font-size: 15px;
   color: #414042; }
+  @media (max-width: 800px) {
+    #g-Chennai-map-Artboard_1 .g-aiPstyle2 {
+      font-size: 0.8em; } }
 
 #g-Chennai-map-Artboard_1 .g-aiPstyle3 {
   font-family: Open Sans;
@@ -515,6 +556,9 @@ section h2 {
   line-height: 50px;
   font-weight: bold;
   color: #808285; }
+  @media (max-width: 800px) {
+    #g-Chennai-map-Artboard_1 .g-aiPstyle4 {
+      font-size: 1.3em; } }
 
 .g-aiPtransformed p {
   white-space: nowrap; }
