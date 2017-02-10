@@ -7,6 +7,7 @@ var windowWidth = $(window).width(),
 windowHeight = 160,
 margin = {top: 30, bottom: 30, left: 40, right: 40}
 
+windowWidth = (windowWidth>1200)?1200:windowWidth
 // scrolly for the kkhh nav
  $(window).scroll(function() {
         var windscroll = $(window).scrollTop();
@@ -131,8 +132,4 @@ function getColor(e){
     } else {
         return "#de2d26"
     }
-}
-
-function getSection(){
-    $('section')
 }

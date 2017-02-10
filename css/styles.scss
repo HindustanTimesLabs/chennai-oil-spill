@@ -137,8 +137,13 @@ body{
     }
 } 
 
+.chart-title{
+    color: $text;
+    margin-bottom: 20px;
+}
+
 .copy-container.gap{
-    margin-top: 50px;
+    margin-top: 80px;
 
 }
 
@@ -312,6 +317,10 @@ section{
     margin-bottom: 2em;
     font-size: 1em;
     font-style: italic;
+}
+
+#all-spills-viz{
+    text-align: center;
 }
 
 .progress-nav{
