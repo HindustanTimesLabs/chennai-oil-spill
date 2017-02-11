@@ -80,7 +80,7 @@ body{
     stroke-width: 0.5px;
 }
 
-.progress-nav .s-dot{
+/*.progress-nav .s-dot{
     background-color: #ddd;
     width: 12px;
     height: 12px;
@@ -95,7 +95,7 @@ body{
 
 .progress-nav .s-dot.active{
     background-color: $primary;
-}
+}*/
 
 .copy{
     width: 91%;
@@ -706,6 +706,22 @@ section{
             margin:0 auto;
         }
 
+
+.ai2html.mobile-map{
+    display: none;
+
+
+    @media(max-width: 700px){
+        display: block;
+        margin-bottom: 40px;
+    }
+}
+
+.ai2html.desktop-map{
+    @media(max-width: 700px){
+        display: none;
+    }
+}
 /*map*/
 
 .time-container{
@@ -735,6 +751,10 @@ section{
     left: 10px;
     bottom: 10px;
     color: white;
+    font-size: 2em;
+    @media(max-width: 800px){
+        font-size: 1em;
+    }
 }
 
 .scroll.show{

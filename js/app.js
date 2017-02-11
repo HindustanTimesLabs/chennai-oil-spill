@@ -354,7 +354,7 @@ map.on('load', function () {
 
     function doMapthings(){
         console.log('doing things')
-        setTimeout(function(){ map.flyTo({ zoom: ($(window).width()<600)?11:(12), center: centernew, duration: 3000}) }, 5000);
+        setTimeout(function(){ map.flyTo({ zoom: ($(window).width()<600)?11:(12), center: centernew, duration: 3000}) }, 4000);
         map.flyTo({ zoom: 10, center: chennai, duration: 3000});
         function animateMarker(timestamp) {
             setTimeout(function(){

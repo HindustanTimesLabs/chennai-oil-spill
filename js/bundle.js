@@ -45,9 +45,9 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1)
-	var $ = __webpack_require__(3)
-	var d3 = __webpack_require__(4)
-	var _ = __webpack_require__(5)
+	var $ = __webpack_require__(2)
+	var d3 = __webpack_require__(3)
+	var _ = __webpack_require__(4)
 	
 	$("#all-spills-viz").append("<div class='tip'></div>");
 	$(".tip").hide();
@@ -400,7 +400,7 @@
 	
 	    function doMapthings(){
 	        console.log('doing things')
-	        setTimeout(function(){ map.flyTo({ zoom: ($(window).width()<600)?11:(12), center: centernew, duration: 3000}) }, 5000);
+	        setTimeout(function(){ map.flyTo({ zoom: ($(window).width()<600)?11:(12), center: centernew, duration: 3000}) }, 4000);
 	        map.flyTo({ zoom: 10, center: chennai, duration: 3000});
 	        function animateMarker(timestamp) {
 	            setTimeout(function(){
@@ -514,8 +514,7 @@
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 2 */,
-/* 3 */
+/* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10741,7 +10740,7 @@
 
 
 /***/ },
-/* 4 */
+/* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// https://d3js.org Version 4.5.0. Copyright 2017 Mike Bostock.
@@ -27152,7 +27151,7 @@
 
 
 /***/ },
-/* 5 */
+/* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;//     Underscore.js 1.8.3

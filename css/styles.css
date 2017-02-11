@@ -59,21 +59,22 @@ body {
   stroke: #B51514;
   stroke-width: 0.5px; }
 
-.progress-nav .s-dot {
-  background-color: #ddd;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  vertical-align: middle;
-  margin-left: 10px;
-  margin-right: 10px;
-  display: inline-block;
-  margin-top: 15px;
-  z-index: 10000; }
+/*.progress-nav .s-dot{
+    background-color: #ddd;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    margin-top: 15px;
+    z-index: 10000;
+}
 
-.progress-nav .s-dot.active {
-  background-color: #48a2d7; }
-
+.progress-nav .s-dot.active{
+    background-color: $primary;
+}*/
 .copy {
   width: 91%;
   margin-left: auto;
@@ -580,6 +581,17 @@ section h2 {
 .g-artboard {
   margin: 0 auto; }
 
+.ai2html.mobile-map {
+  display: none; }
+  @media (max-width: 700px) {
+    .ai2html.mobile-map {
+      display: block;
+      margin-bottom: 40px; } }
+
+@media (max-width: 700px) {
+  .ai2html.desktop-map {
+    display: none; } }
+
 /*map*/
 .time-container {
   position: absolute;
@@ -602,7 +614,11 @@ section h2 {
   position: absolute;
   left: 10px;
   bottom: 10px;
-  color: white; }
+  color: white;
+  font-size: 2em; }
+  @media (max-width: 800px) {
+    .scroll {
+      font-size: 1em; } }
 
 .scroll.show {
   display: block; }
