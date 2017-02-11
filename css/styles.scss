@@ -80,22 +80,12 @@ body{
     stroke-width: 0.5px;
 }
 
-/*.progress-nav .s-dot{
-    background-color: #ddd;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    vertical-align: middle;
-    margin-left: 10px;
-    margin-right: 10px;
-    display: inline-block;
-    margin-top: 15px;
-    z-index: 10000;
+.chart-instructions{
+    margin-bottom: 30px;
+    @media(max-width: 800px){
+        display: none;
+    }
 }
-
-.progress-nav .s-dot.active{
-    background-color: $primary;
-}*/
 
 .copy{
     width: 91%;
@@ -116,37 +106,6 @@ body{
         margin-left: 6%;
     }
 }
-
-.progress, .progress-base{
-    width: 100%;
-}
-
-.progress{
-    z-index: 100;
-    width: 0%;
-    margin-top: -4px;
-    border: solid 2px $primary; 
-    /*transition: all 0.3s linear;*/
-}
-
-.progress-base{
-    z-index: 90;
-    border: solid 2px #ddd; 
-}
-
-.map-container{
-    position: relative
-}
-
-#map{
-    height: 550px;
-    margin-bottom: 50px;
-    @media(max-width: 600px){
-    height: 400px;
-    }
-}
-
-
 
 .copy-container{
     padding-top: 7em;
@@ -252,13 +211,14 @@ body{
 }
 
 .story{
+    padding-top: 40px;
     h1.headline{
         text-align: left;
         padding-top: 0.7em;
-        font-size: 2.8em;
+        font-size: 2.6em;
         max-width: 650px;
         margin-left: 30px;
-        padding-bottom: 0.7em;
+        padding-bottom: 0.5em;
         span{
             display: block;
             font-size: 0.6em;
@@ -335,6 +295,7 @@ section{
     z-index: 500;
     padding: 0.2em;
     top: 0;
+    position: fixed;
     a{
         color: inherit;
     }
@@ -390,41 +351,26 @@ section{
     font-style: italic;
 }
 
-#all-spills-viz{
-    text-align: center;
-}
-
-.progress-nav{
-    height: 40px;
-    background-color: $back;
-    transition: all 0.3s linear;
-    padding-left: 20px;
-    padding-right: 20px;
-    position: relative;
-    opacity: 0;
-}
-
-.progress-nav .s-dot-container{
-    width: 19%;
-    display: inline-block;
-    text-align: center;
-    z-index: 10000;
-}
-
-.boss-dot-container{
+iframe{
+    height: 550px;
     @media(max-width: 600px){
-        margin-left: -3%;
+        height: 350px;
+    }
+    @media(max-width: 500px){
+        height: 250px;
     }
 }
 
-.progress-nav.fixed{
-    opacity: 1;
-    z-index: 10;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    box-shadow: 0 1px 5px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.1);
+#all-spills-viz{
+    text-align: center;
+    svg{
+        @media(max-width: 700px){
+            display: none;
+        }
+    }
+
 }
+
 
 .related-stories.copy{
     padding-top: 30px;
@@ -532,9 +478,18 @@ section{
 
 .legend-block{
     display: inline-block;
-    width: 240px;
+    max-width: 240px;
     font-family: $block;
     font-size: 0.9em;
+        margin: 20px;
+    @media(max-width: 700px){
+        display: block;
+        width: 240px;
+        font-family: $block;
+        font-size: 0.9em;
+        text-align: left;
+        margin-left: 10px;
+    }
 }
 
 .legend-block .legend-box{
@@ -709,8 +664,6 @@ section{
 
 .ai2html.mobile-map{
     display: none;
-
-
     @media(max-width: 700px){
         display: block;
         margin-bottom: 40px;
